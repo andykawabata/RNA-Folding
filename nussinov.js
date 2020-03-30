@@ -1,6 +1,7 @@
-
+console.log(nussinov(['A','U','A','U']))
 
 function nussinov(sequence){
+
     let i = 0;
     let j = sequence.length - 1;
     const allComobosOfGreatestLength = s(i,j);
@@ -38,6 +39,7 @@ function nussinov(sequence){
         
         let arrayOfAllLargestArrays = findMax(allArrays) //REMOVE DUPLICATES
         let largestUniqueArrays = removeSelfDuplicates(arrayOfAllLargestArrays);
+        
         return largestUniqueArrays;
         
         
@@ -51,6 +53,7 @@ function nussinov(sequence){
 
            //remove elements from current that are already in all arrays
             let cleanCurrent = removeDuplicates(currentNoDups, allArrays)//allArrays=4d current=3d
+            allArrays.push(cleanCurrent);
         }
         return findMax(allArrays)
     }
