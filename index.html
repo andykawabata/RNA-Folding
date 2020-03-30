@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style>
+       #top{
+        margin: 25px 0 0 25px;
+      }
+      #instructions{
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+
+<div id="top">
+  <div id="instructions"><i>Enter only capital letters A,U,C or G with NO SPACES OR OTHER CHARACTERS (no more than 12 bases at a time)</i></div>
+  Enter Sequence: <input type="text" name="sequence" id="input">
+  <button  onclick="updateParams(document.getElementById('input').value)">Fold</button> 
+  <div id="info"></div>
+</div>
+    <script>
+        function updateParams(input){
+            var url = window.location.href;
+            url = '?seq=' + input
+            window.location.href = url
+        }
+    </script>
+    <script src="nussinov.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+
+    <script src="nussinov.js">
+    </script>
+
+  </head>
+  <body>
+  </body>
+</html>
