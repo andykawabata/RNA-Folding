@@ -7,6 +7,10 @@ const VERTICAL_GAP = 150
 function setup() {
     let params = getURLParams();
     let seqArray = params.seq.split('');
+    if(seqArray.length>12){
+        alert("Enter 12 bases or less");
+        return 0;
+    }
     let combos = nussinov(seqArray);
 
     let height = combos.length * VERTICAL_GAP + 100
